@@ -1,6 +1,20 @@
 #include <stdio.h>
 
-int main(){/* Criando simulação de alguns movimentos de 3 peças de xadrez:*/
+//declarando as recursividades ::: VOID
+
+void bispo (int numBispo){ // variavel local.
+    if (numBispo > 0){     // bispo irá se movimentar 5x 
+
+        bispo(numBispo - 1);
+        printf("%d \n", numBispo);}// printf nessa posição conta crescente.
+
+    }
+    
+    int main (){/* Criando simulação de alguns movimentos de 3 peças de xadrez:*/
+
+        
+}
+
 
 
 
@@ -27,14 +41,9 @@ case 1:
 
     switch (selectPart) // Inserindo menu para escolher peça
     {
-    case 1: //Movimento Bispo usando > While <*******************************************
-        int bispo = 1;//variavel local
-        while (bispo<=5)
-        {
-            printf("Cima, Direita\n");
-            bispo++;
-        }
-        
+    case 1: //Movimento Bispo usando > recursividade void e if <*******************************************
+        int quantidade = 4; // quantidade de vezes que vai andar a peça;
+                
 
     break;
     case 2: // Movimento Torre usando > for <*******************************************
