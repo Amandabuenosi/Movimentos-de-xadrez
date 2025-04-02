@@ -57,7 +57,7 @@ case 1:
 
         printf("O movimento do Bispo é: \n");
         bispo (quantidadeBispo);
-        printf("\n");
+        printf("\n");//espaçamento
                 
 
     break;
@@ -67,7 +67,7 @@ case 1:
 
         printf("O movimento da Torre é: \n");
         torre (quantidadeTorre);
-        printf("\n");    
+        printf("\n"); //espaçamento   
 
 
     break;
@@ -77,7 +77,7 @@ case 1:
 
         printf("O movimento da Rainha é: \n");
         rainha (quantidadeRainha);
-        printf("\n");
+        printf("\n");//espaçamento
 
 
     break;
@@ -93,7 +93,7 @@ case 1:
                                
             printf("Direita\n");
         }
-        printf("\n");      
+        printf("\n");      //espaçamento
 
     break;
     default:
