@@ -2,20 +2,30 @@
 
 //declarando as recursividades ::: VOID
 
-void bispo (int numBispo){ // variavel local.
-    if (numBispo > 0){     // bispo irá se movimentar 5x 
+void bispo (int numBispo){ // variavel local Bispo
+        if (numBispo > 0){     
 
-        bispo(numBispo - 1);
-        printf("%d \n", numBispo);}// printf nessa posição conta crescente.
+            bispo(numBispo - 1);
+            printf("Cima, direita\n");}// printf nessa posição conta crescente.
 
     }
+
+void torre (int numTorre){ // variavel local Torre
+        if (numTorre > 0){     
     
-    int main (){/* Criando simulação de alguns movimentos de 3 peças de xadrez:*/
+            torre(numTorre - 1);
+            printf("Direita. \n");}
 
-        
-}
+        }
 
+void rainha (int numRainha){ // variavel local Rainha
+        if (numRainha > 0){     
 
+            rainha(numRainha - 1);
+            printf("Esquerda \n");}
+    }
+
+int main (){/* Criando simulação de alguns movimentos de 4 peças de xadrez:*/
 
 
 int option; // variavel menu inicial
@@ -42,60 +52,58 @@ case 1:
     switch (selectPart) // Inserindo menu para escolher peça
     {
     case 1: //Movimento Bispo usando > recursividade void e if <*******************************************
-        int quantidade = 4; // quantidade de vezes que vai andar a peça;
+    
+        int quantidadeBispo = 5; // quantidade de vezes que vai andar a peça;
+
+        printf("O movimento do Bispo é: \n");
+        bispo (quantidadeBispo);
                 
 
     break;
-    case 2: // Movimento Torre usando > for <*******************************************
+    case 2: // Movimento Torre usando > recursividade void e if <*******************************************
     
-        for (int torre = 0; torre <= 4 ; torre++) //variavel com nome da peça.
-        {
-            printf("Direita\n");
-        }
+        int quantidadeTorre = 5; // quantidade de vezes que vai andar a peça;
+
+        printf("O movimento da Torre é: \n");
+        bispo (quantidadeTorre);
             
 
     break;
-    case 3: //Movimento Rainha usando > Do while <*******************************************
-        int rainha=1; //variavel local
+    case 3: //Movimento Rainha usando > recursividade void e if <*******************************************
 
-        do
-        {
-            printf("Esquerda\n");
-            rainha++;
+        int quantidadeRainha = 8; // quantidade de vezes que vai andar a peça;
 
-        } while (rainha<=8);
-            
+        printf("O movimento da Rainha é: \n");
+        rainha (quantidadeRainha);
+        
 
     break;
-    case 4: //Movimento do Cavalo usando >while e for <***************************************
+    case 4: //Movimento do Cavalo usando > múltiplas variáveis e condições <***************************************
        
         int vertical, horizontal; //variaveis locais
-        vertical =1;
-        horizontal=1;
-
-        while (vertical == horizontal)
         
-            for (int horinzontal; horizontal <=2 ; horizontal++) { //executar 2x interno e finaliza com o externo.
-                printf("Baixo\n");
-            }
-            vertical++;
-            printf("Esquerda\n");
-        
-        
-        
-
-        break;
-        default:
-        printf("Opção inválida!\n");
-        break;
+        for (vertical = 2, horizontal = 0; vertical > horizontal ; vertical--, horizontal++) { // direita até o valor vertical. externo
+            for (vertical=0 , horizontal=3; vertical < horizontal ; vertical++, horizontal--) // cima até o valor da horizontal. interno
+                {
+                    printf("Cima\n");
+                }
+                               
+            printf("Direita\n");
         }
-
-    break;
-    case 2: // menu inicial opção 2
-        printf("Saindo do jogo...\n");
+               
 
     break;
     default:
+    printf("Opção inválida!\n");
+    break;
+    }
+
+break;
+case 2: // menu inicial opção 2
+    printf("Saindo do jogo...\n");
+
+break;
+default:
         printf("Opção inválida\n");
 
 break;
