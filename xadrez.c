@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(){/* Criando simulação de alguns movimentos de 3 peças de xadrez:*/
+int main(){/* Criando simulação de alguns movimentos de 4 peças de xadrez:*/
 
 
 
