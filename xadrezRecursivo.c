@@ -57,6 +57,7 @@ case 1:
 
         printf("O movimento do Bispo é: \n");
         bispo (quantidadeBispo);
+        printf("\n");
                 
 
     break;
@@ -66,7 +67,8 @@ case 1:
 
         printf("O movimento da Torre é: \n");
         torre (quantidadeTorre);
-            
+        printf("\n");    
+
 
     break;
     case 3: //Movimento Rainha usando > recursividade void e if <*******************************************
@@ -75,11 +77,12 @@ case 1:
 
         printf("O movimento da Rainha é: \n");
         rainha (quantidadeRainha);
-        
+        printf("\n");
+
 
     break;
     case 4: //Movimento do Cavalo usando > múltiplas variáveis e condições <***************************************
-       
+        printf("O movimento do Cavalo é: \n");
         int vertical, horizontal; //variaveis locais
         
         for (vertical = 2, horizontal = 0; vertical > horizontal ; vertical--, horizontal++) { // direita até o valor vertical. externo
@@ -90,7 +93,7 @@ case 1:
                                
             printf("Direita\n");
         }
-               
+        printf("\n");      
 
     break;
     default:
