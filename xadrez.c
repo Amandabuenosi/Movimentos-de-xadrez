@@ -22,12 +22,13 @@ case 1:
     printf("1. Bispo\n");
     printf("2. Torre\n");
     printf("3. Rainha\n");
-    scanf("%d", &selectPart);
+    printf("4. Cavalo\n");
+    scanf("%d", &selectPart);// variavel local
 
     switch (selectPart) // Inserindo menu para escolher peça
     {
     case 1: //Movimento Bispo usando > While <*******************************************
-        int bispo = 1;
+        int bispo = 1;//variavel local
         while (bispo<=5)
         {
             printf("Cima, Direita\n");
@@ -46,7 +47,7 @@ case 1:
 
     break;
     case 3: //Movimento Rainha usando > Do while <*******************************************
-        int rainha=1;
+        int rainha=1; //variavel local
 
         do
         {
@@ -57,11 +58,28 @@ case 1:
             
 
     break;
+    case 4: //Movimento do Cavalo usando >while e for <***************************************
+       
+        int vertical, horizontal; //variaveis locais
+        vertical =1;
+        horizontal=1;
+
+        while (vertical == horizontal)
+        
+            for (int horinzontal; horizontal <=2 ; horizontal++) { //executar 2x interno e finaliza com o externo.
+                printf("Baixo\n");
+            }
+            vertical++;
+            printf("Esquerda\n");
+        }
+        
+        
+
+    break;
     default:
         printf("Opção inválida!\n");
         break;
     }
-
 
 break;
 case 2: // menu inicial opção 2
