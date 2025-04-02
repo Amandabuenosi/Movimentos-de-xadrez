@@ -65,7 +65,7 @@ case 1:
         int quantidadeTorre = 5; // quantidade de vezes que vai andar a peça;
 
         printf("O movimento da Torre é: \n");
-        bispo (quantidadeTorre);
+        torre (quantidadeTorre);
             
 
     break;
